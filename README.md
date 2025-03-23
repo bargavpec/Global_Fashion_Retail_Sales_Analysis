@@ -1,8 +1,5 @@
-Sure! Here’s a structured template for the README file of your "Global Fashion Retail Sales" project. You can adapt the content based on your project's specifics.
 
----
-
-# Global Fashion Retail Sales Project
+# Global Fashion Retail Sales Analysis Project
 
 ## Overview
 
@@ -10,19 +7,19 @@ This project analyzes global fashion retail sales trends, focusing on key metric
 
 ### Key Features:
 - **Sales Data Analysis**: In-depth analysis of fashion retail sales data across different regions and time periods.
-- **Trend Forecasting**: Use historical data to forecast future sales trends.
+- **Analyze Staffing and Performance**: Evaluate store staffing ratios and analyze the impact of employee performance on store success.
 - **Consumer Behavior Insights**: Insights into consumer purchasing habits and preferences in the fashion industry.
 - **Market Segmentation**: Categorizing the global market by region, demographics, and fashion preferences.
   
 ## Table of Contents
-1. [Project Structure](#project-structure)
-2. [Installation Guide](#installation-guide)
-3. [Data Sources](#data-sources)
-4. [Usage](#usage)
-5. [Technologies Used](#technologies-used)
-6. [Results](#results)
-7. [Contributing](#contributing)
-8. [License](#license)
+1. [Architecture](#Architecture)
+2. [Project Structure](#project-structure)
+3. [Installation Guide](#installation-guide)
+4. [Data Sources](#data-sources)
+5. [Usage](#usage)
+6. [Technologies Used](#technologies-used)
+7. [Results](#results)
+
 
 ## Project Structure
 
@@ -99,12 +96,13 @@ Run `notebooks/consumer_behavior.ipynb` to generate insights on consumer prefere
 
 ## Technologies Used
 
-- **Python 3.8+**
-- **Pandas**: Data manipulation and analysis.
-- **Matplotlib/Seaborn**: Data visualization.
-- **Scikit-learn**: Machine learning for forecasting.
-- **Jupyter Notebooks**: Interactive data exploration.
-- **SQL**: Querying relational databases (if applicable).
+- **Docker**: Containers.
+- **Apache Airflow**: Orchestration.
+- **Looker Studio**: Data visualization.
+- **Google Bigquery**: Cloud Datawarehouse.
+- **Google cloud storage**: Storage layer.
+- **Google Dataproc**: Managed spark service.
+- **Spark**: Data processing.
 
 ## Results
 
@@ -116,22 +114,7 @@ The analysis reveals the following key insights:
 
 For detailed results, please check the notebooks in the `/notebooks` folder.
 
-## Contributing
 
-We welcome contributions to enhance this project! Please follow these steps:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Make your changes and commit (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Create a pull request.
 
-Please ensure that your code adheres to the project's coding standards and passes the necessary tests.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to adjust the sections or add any additional details relevant to your project!
