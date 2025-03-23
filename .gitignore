@@ -1,4 +1,7 @@
 .google/
 logs/
 plugins/
+terraform/keys/
+terraform/.terraform*
+terraform/.terraform/
 dags/__pycache__/
