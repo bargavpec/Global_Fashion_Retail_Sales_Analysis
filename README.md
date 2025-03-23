@@ -128,9 +128,9 @@ Looker Dashboard : https://lookerstudio.google.com/reporting/8d414e07-00ae-4cbd-
 ## Results
 
 The analysis reveals the following key insights:
-1. **Growth**: The global fashion retail market grew by X% over the past Y years, with significant growth in region A.
+1. **Growth**: The global fashion retail market grew by 12% in 2024 compared to 2023.
 2. **Trends**: The most popular fashion trends in Q1 2025 include sustainable fashion and athleisure.
-3. **Consumer Insights**: Consumers in region A tend to favor luxury brands, while region B shows a preference for affordable, fast fashion.
+3. **Consumer Insights**: Consumers in region US tend to favor luxury brands, while region China shows a preference for affordable, fast fashion.
 
 
 
