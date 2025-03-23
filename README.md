@@ -22,7 +22,7 @@ This project analyzes global fashion retail sales trends, focusing on key metric
 
 ## Architecture
 
-![Architecture Diagram](./images/Architecture Diagram.jpg)
+![Architecture Diagram](/images/Architecture Diagram.jpg)
 
 ## Project Structure
 
