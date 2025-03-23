@@ -31,10 +31,9 @@ The project folder is organized as follows:
 ```
 /global-fashion-retail-sales
 ├── /data                # Raw and cleaned data files
-├── /notebooks           # Jupyter notebooks with analysis and visualizations
 ├── /scripts             # Python scripts for data processing and analysis
-├── /results             # Output files like charts, graphs, and reports
-├── /docs                # Documentation files
+├── /dags                # Airflow dags
+├── /images              # Architecture diagram & Looker dashboard
 ├── README.md            # Project overview and instructions
 └── requirements.txt     # List of required Python packages
 ```
