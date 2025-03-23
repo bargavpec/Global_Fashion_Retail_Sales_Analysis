@@ -28,6 +28,7 @@ This project analyzes global fashion retail sales trends, focusing on key metric
 3. Transform : Submit spark job on dataproc cluster to load aggreagte data to Bigquery tables.
 4. Visualize : Create dashboard in Looker studio pointing to Bigquery dataset.
 5. Orchestration: All ELT steps are automated via Airflow DAG. We can schedule as per need.
+6. Infrastructure: Google cloud storage bucket, Bigquery dataset & Dataproc cluster provisioned by Terraform.
 
 ![Architecture Diagram](https://github.com/bargavpec/Global_Fashion_Retail_Sales_Analysis/blob/main/images/Architecture%20Diagram.jpg)
 
@@ -37,9 +38,10 @@ The project folder is organized as follows:
 
 ```
 /global-fashion-retail-sales
-├── /data                # Raw and cleaned data files
+├── /data                # Raw and cleaned data files (Note: Pls check (#data-sources) for all input files)
 ├── /scripts             # Python scripts for data processing and analysis
 ├── /dags                # Airflow dags
+├── /terraform           # Terraform .tf files
 ├── /images              # Architecture diagram & Looker dashboard
 ├── README.md            # Project overview and instructions
 └── requirements.txt     # List of required Python packages
@@ -55,20 +57,28 @@ To get started with this project, you'll need to have Python 3.8+ installed. Fol
    cd Global_Fashion_Retail_Sales_Analysis
    ```
 
-2. Install Docker and validate it by running command: docker --version  
-
-3. Docker spin up the containers using docker compose:
+2. Install Docker and validate it by running command: docker --version
+3. Install Terraform and validate it by running command: terraform --version
+4. Create resources: GCS bucket, Bigquery dataset & Dataproc cluster:   
+   ```
+   terraform apply
+   ```
+5. Docker spin up the containers using docker compose:
    ```
    docker-compose up -d
    ```
-4. Run the project:
+6. Run the project:
    Go to Airflow console & run the Airflow DAGs to begin your analysis. For example:
    ```
    Airflow console: http://localhost:8080/
    ```
-5. Once DAG run is success, shut down the containers:
+7. Once DAG run is success, shut down the containers:
    ```
    docker-compose down
+   ```
+8. Destroy resources when not needed anymore: GCS bucket, Bigquery dataset & Dataproc cluster:   
+   ```
+   terraform destroy
    ```
 
 ## Data Sources
@@ -103,8 +113,9 @@ Looker Dashboard : https://lookerstudio.google.com/reporting/8d414e07-00ae-4cbd-
 
 ## Technologies Used
 
-- **Docker**: Containers.
-- **Apache Airflow**: Orchestration.
+- **Docker**: Build & run Containers.
+- **Terraform**: Iaac - build resources.
+- **Apache Airflow**: Data Orchestration.
 - **Looker Studio**: Data visualization.
 - **Google Bigquery**: Cloud Datawarehouse.
 - **Google cloud storage**: Storage layer.
