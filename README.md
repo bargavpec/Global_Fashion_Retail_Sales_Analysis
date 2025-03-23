@@ -101,7 +101,9 @@ Run `notebooks/consumer_behavior.ipynb` to generate insights on consumer prefere
 2. Geographical view of sales numbers by country
 3. Trnsaction type analysis by country
 4. Total sales over the years
-Dashboard : https://lookerstudio.google.com/reporting/8d414e07-00ae-4cbd-81a1-63db192bdf95
+
+Looker Dashboard : https://lookerstudio.google.com/reporting/8d414e07-00ae-4cbd-81a1-63db192bdf95
+
 ![Global Fashion Retail Sales Analysis Dashboard](https://github.com/bargavpec/Global_Fashion_Retail_Sales_Analysis/blob/main/images/Global%20Retail%20Sales%20Analysis.jpg)
 
 
