@@ -75,24 +75,16 @@ The primary data sources for this project include:
 
 ## Usage
 
-### 1. Sales Data Analysis
-Run `notebooks/sales_analysis.ipynb` to analyze the sales data, including:
-- Revenue analysis by region
-- Year-over-year growth trends
-- Product category performance
+### 1. Sales Data Processing
+Run `dags/data_ingestion_gcs.py` in Airflow to process the sales data, including:
+- Download Kaggle dataset
+- Unzip and extract the CSV files
+- Format CSV files to Parquet
+- Upload parquet files to Google Cloud Storage
+- Submit spark job on dataproc cluster, spark code in `scripts/spark_ingest.py` 
 
-### 2. Forecasting Future Sales
-The forecasting module in `scripts/forecasting.py` uses machine learning algorithms to predict sales trends for the next quarters. 
-
-```python
-from forecasting import forecast_sales
-
-# Predict sales for the next quarter
-forecast_sales(data)
-```
-
-### 3. Consumer Insights
-Run `notebooks/consumer_behavior.ipynb` to generate insights on consumer preferences, focusing on demographic factors, fashion styles, and spending habits.
+### 2. Insights
+-Login to Looker studio, connect to data source in Bigquery and generate a dashboard including different charts like Timeseries, bubble map etc
 
 ## Visualizations
 
