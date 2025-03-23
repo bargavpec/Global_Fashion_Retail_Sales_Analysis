@@ -24,7 +24,7 @@ This project analyzes global fashion retail sales trends, focusing on key metric
 ## Architecture
 
 1. Extract : Download kaggle dataset into the local , unzip the file and extract the CSV files.
-2. Load : Format the CSV files to parquet files and upload them to Google clous storage.
+2. Load : Format the CSV files to parquet files and upload them to Google cloud storage.
 3. Transform : Submit spark job on dataproc cluster to load aggreagte data to Bigquery tables.
 4. Visualize : Create dashboard in Looker studio pointing to Bigquery dataset.
 5. Orchestration: All ELT steps are automated via Airflow DAG. We can schedule as per need.
@@ -38,7 +38,7 @@ The project folder is organized as follows:
 
 ```
 /global-fashion-retail-sales
-├── /data                # Raw and cleaned data files (Note: Pls check (#data-sources) for all input files)
+├── /data                # Raw and cleaned data files (Note: Pls check [Data Sources](#data-sources) for all input files)
 ├── /scripts             # Python scripts for data processing and analysis
 ├── /dags                # Airflow dags
 ├── /terraform           # Terraform .tf files
@@ -92,12 +92,14 @@ The primary data sources for this project include:
 ## Usage
 
 ### 1. Sales Data Processing
-Run `dags/data_ingestion_gcs.py` in Airflow to process the sales data, which includes:
-- Download Kaggle dataset
-- Unzip and extract the CSV files
-- Format CSV files to Parquet
-- Upload parquet files to Google Cloud Storage
-- Submit spark job on dataproc cluster to create aggregate table in Bigquery, spark code in `scripts/spark_ingest.py` 
+1. Copy pipeline script `scripts/spark_ingest.py` to GCS bucket using below command:
+   gsutil -m cp scripts/spark_ingest.py gs://{BUCKET}/code/
+2. Run `dags/data_ingestion_gcs.py` in Airflow to process the sales data, which includes:
+  - Download Kaggle dataset
+  - Unzip and extract the CSV files
+  - Format CSV files to Parquet
+  - Upload parquet files to Google Cloud Storage
+  - Submit spark job on dataproc cluster to create aggregate table in Bigquery, spark code in `scripts/spark_ingest.py` 
 
 ### 2. Insights
 - Login to Looker studio, connect to data source in Bigquery and generate a dashboard including different charts like Timeseries, bubble map etc
