@@ -22,6 +22,13 @@ This project analyzes global fashion retail sales trends, focusing on key metric
 8. [Results](#results)
 
 ## Architecture
+
+1. Extract : Download kaggle dataset into the local , unzip the file and extract the CSV files.
+2. Load : Format the CSV files to parquet files and upload them to Google clous storage.
+3. Transform : Submit spark job on dataproc cluster to load aggreagte data to Bigquery tables.
+4. Visualize : Create dashboard in Looker studio pointing to Bigquery dataset.
+5. Orchestration: All ELT steps are automated via Airflow DAG. We can schedule as per need.
+
 ![Architecture Diagram](https://github.com/bargavpec/Global_Fashion_Retail_Sales_Analysis/blob/main/images/Architecture%20Diagram.jpg)
 
 ## Project Structure
@@ -44,28 +51,24 @@ To get started with this project, you'll need to have Python 3.8+ installed. Fol
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/global-fashion-retail-sales.git
-   cd global-fashion-retail-sales
+   git clone https://github.com/bargavpec/Global_Fashion_Retail_Sales_Analysis.git
+   cd Global_Fashion_Retail_Sales_Analysis
    ```
 
-2. Set up a virtual environment (optional but recommended):
-   ```
-   python -m venv venv
-   source venv/bin/activate  # For macOS/Linux
-   venv\Scripts\activate     # For Windows
-   ```
+2. Install Docker and validate it by running command: docker --version  
 
-3. Install dependencies:
+3. Docker spin up the containers using docker compose:
    ```
-   pip install -r requirements.txt
+   docker-compose up -d
    ```
-
-4. Download the dataset and place it in the `/data` directory (see [Data Sources](#data-sources)).
-
-5. Run the project:
-   You can run the Jupyter notebooks or Python scripts to begin your analysis. For example:
+4. Run the project:
+   Go to Airflow console & run the Airflow DAGs to begin your analysis. For example:
    ```
-   jupyter notebook
+   Airflow console: http://localhost:8080/
+   ```
+5. Once DAG run is success, shut down the containers:
+   ```
+   docker-compose down
    ```
 
 ## Data Sources
@@ -76,15 +79,15 @@ The primary data sources for this project include:
 ## Usage
 
 ### 1. Sales Data Processing
-Run `dags/data_ingestion_gcs.py` in Airflow to process the sales data, including:
+Run `dags/data_ingestion_gcs.py` in Airflow to process the sales data, which includes:
 - Download Kaggle dataset
 - Unzip and extract the CSV files
 - Format CSV files to Parquet
 - Upload parquet files to Google Cloud Storage
-- Submit spark job on dataproc cluster, spark code in `scripts/spark_ingest.py` 
+- Submit spark job on dataproc cluster to create aggregate table in Bigquery, spark code in `scripts/spark_ingest.py` 
 
 ### 2. Insights
--Login to Looker studio, connect to data source in Bigquery and generate a dashboard including different charts like Timeseries, bubble map etc
+- Login to Looker studio, connect to data source in Bigquery and generate a dashboard including different charts like Timeseries, bubble map etc
 
 ## Visualizations
 
@@ -114,9 +117,7 @@ The analysis reveals the following key insights:
 1. **Growth**: The global fashion retail market grew by X% over the past Y years, with significant growth in region A.
 2. **Trends**: The most popular fashion trends in Q1 2025 include sustainable fashion and athleisure.
 3. **Consumer Insights**: Consumers in region A tend to favor luxury brands, while region B shows a preference for affordable, fast fashion.
-4. **Forecasting**: Based on current trends, the fashion retail industry is expected to grow by Z% in the next 12 months.
 
-For detailed results, please check the notebooks in the `/notebooks` folder.
 
 
 
