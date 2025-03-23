@@ -59,24 +59,27 @@ To get started with this project, you'll need to have Python 3.8+ installed. Fol
 
 2. Install Docker and validate it by running command: docker --version
 3. Install Terraform and validate it by running command: terraform --version
-4. Create resources: GCS bucket, Bigquery dataset & Dataproc cluster:   
+   https://developer.hashicorp.com/terraform/install
+5. Create resources: GCS bucket, Bigquery dataset & Dataproc cluster:   
    ```
+   terraform init
+   terraform plan
    terraform apply
    ```
-5. Docker spin up the containers using docker compose:
+6. Docker spin up the containers using docker compose:
    ```
    docker-compose up -d
    ```
-6. Run the project:
+7. Run the project:
    Go to Airflow console & run the Airflow DAGs to begin your analysis. For example:
    ```
    Airflow console: http://localhost:8080/
    ```
-7. Once DAG run is success, shut down the containers:
+8. Once DAG run is success, shut down the containers:
    ```
    docker-compose down
    ```
-8. Destroy resources when not needed anymore: GCS bucket, Bigquery dataset & Dataproc cluster:   
+9. Destroy resources when not needed anymore: GCS bucket, Bigquery dataset & Dataproc cluster:   
    ```
    terraform destroy
    ```
