@@ -38,7 +38,7 @@ The project folder is organized as follows:
 
 ```
 /global-fashion-retail-sales
-├── /data                # Raw and cleaned data files (Note: Pls check [Data Sources](#data-sources) for all input files)
+├── /data                # Raw and cleaned data files (Note: Pls check [Data Sources] for all input files)
 ├── /scripts             # Python scripts for data processing and analysis
 ├── /dags                # Airflow dags
 ├── /terraform           # Terraform .tf files
