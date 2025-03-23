@@ -54,6 +54,7 @@ GROUP BY 1,2
 
 df_result.write.format('bigquery') \
     .option('table', output) \
+    .option('partitionField', 'Product_category') \
     .mode('overwrite') \
     .save()
 
@@ -67,8 +68,8 @@ JOIN stores AS st
 on tr.`Store ID`=st.`Store ID`
 group by 1
 """)
-
 df_store_result.write.format('bigquery') \
     .option('table', output_store) \
+    .option('partitionField', 'Country') \
     .mode('overwrite') \
     .save()
