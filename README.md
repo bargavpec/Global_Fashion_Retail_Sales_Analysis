@@ -21,7 +21,7 @@ This project analyzes global fashion retail sales trends, focusing on key metric
 7. [Results](#results)
 
 ## Architecture
-![Architecture Diagram](images/Architecture Diagram.jpg)
+![Architecture Diagram](https://github.com/bargavpec/Global_Fashion_Retail_Sales_Analysis/blob/main/images/Architecture%20Diagram.jpg)
 
 ## Project Structure
 
