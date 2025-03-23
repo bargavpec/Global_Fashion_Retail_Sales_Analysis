@@ -34,3 +34,9 @@ resource "google_bigquery_dataset" "training_dataset" {
   project = "inner-fx-449107-t5"
   location      = "US"
 }
+
+resource "google_dataproc_cluster" "trainingcluster" {
+  name   = "zoomcamp"
+  project = "inner-fx-449107-t5"
+  region = "us-central1"
+}
