@@ -20,6 +20,9 @@ This project analyzes global fashion retail sales trends, focusing on key metric
 6. [Technologies Used](#technologies-used)
 7. [Results](#results)
 
+## Architecture
+
+![Alt text](./path/to/image.jpg)
 
 ## Project Structure
 
@@ -69,9 +72,7 @@ To get started with this project, you'll need to have Python 3.8+ installed. Fol
 ## Data Sources
 
 The primary data sources for this project include:
-- Global fashion retail sales data from [source name] (e.g., Statista, Euromonitor, etc.).
-- Consumer behavior data from [source name].
-- Market segmentation data from [source name].
+- Global fashion retail sales data from [Kaggle] https://www.kaggle.com/datasets/ricgomes/global-fashion-retail-stores-dataset
 
 ## Usage
 
