@@ -95,6 +95,15 @@ forecast_sales(data)
 ### 3. Consumer Insights
 Run `notebooks/consumer_behavior.ipynb` to generate insights on consumer preferences, focusing on demographic factors, fashion styles, and spending habits.
 
+## Visualizations
+
+1. Sales numbers per product category
+2. Geographical view of sales numbers by country
+3. Trnsaction type analysis by country
+4. Total sales over the years
+   Dashboard : https://lookerstudio.google.com/reporting/8d414e07-00ae-4cbd-81a1-63db192bdf95
+
+
 ## Technologies Used
 
 - **Docker**: Containers.
