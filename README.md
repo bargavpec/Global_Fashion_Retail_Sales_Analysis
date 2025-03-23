@@ -17,8 +17,9 @@ This project analyzes global fashion retail sales trends, focusing on key metric
 3. [Installation Guide](#installation-guide)
 4. [Data Sources](#data-sources)
 5. [Usage](#usage)
-6. [Technologies Used](#technologies-used)
-7. [Results](#results)
+6. [Visualizations](#Visualizations)
+7. [Technologies Used](#technologies-used)
+8. [Results](#results)
 
 ## Architecture
 ![Architecture Diagram](https://github.com/bargavpec/Global_Fashion_Retail_Sales_Analysis/blob/main/images/Architecture%20Diagram.jpg)
@@ -100,7 +101,8 @@ Run `notebooks/consumer_behavior.ipynb` to generate insights on consumer prefere
 2. Geographical view of sales numbers by country
 3. Trnsaction type analysis by country
 4. Total sales over the years
-   Dashboard : https://lookerstudio.google.com/reporting/8d414e07-00ae-4cbd-81a1-63db192bdf95
+Dashboard : https://lookerstudio.google.com/reporting/8d414e07-00ae-4cbd-81a1-63db192bdf95
+![Global Fashion Retail Sales Analysis Dashboard](https://github.com/bargavpec/Global_Fashion_Retail_Sales_Analysis/blob/main/images/Global%20Retail%20Sales%20Analysis.jpg)
 
 
 ## Technologies Used
