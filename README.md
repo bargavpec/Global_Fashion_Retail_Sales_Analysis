@@ -109,7 +109,7 @@ The primary data sources for this project include:
 1. Sales numbers per product category
 2. Geographical view of sales numbers by country
 3. Trnsaction type analysis by country
-4. Total sales over the years
+4. Total sales over the years with drill down to months.
 
 Looker Dashboard : https://lookerstudio.google.com/reporting/8d414e07-00ae-4cbd-81a1-63db192bdf95
 
